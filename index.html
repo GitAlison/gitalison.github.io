@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Alison Aguiar</title><link rel="stylesheet" href="./css/styles.css"><link rel="stylesheet" href="./css/main.css"><link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><script type="text/x-template" id="home-component"><div>
+            <h1> {{display}}</h1>
+
+        </div></script><script type="text/x-template" id="portifolio-component"><div>
+            <div v-if="!selectedPost" class="list-post">
+                <div class="post mb-3" v-for="(post,index) in posts">
+                    <img class="image-post" :style="{'background-image': 'url('+imageSecure(post?.cover)+ ')' }">
+                    <div class="ml-2 content-post">
+                        <div>
+                            <h5>#0{{index}} - {{post?.title}}</h5>
+                            <p> {{post?.description}} </p>
+                        </div>
+                        <div @click="selectPost(post)" class="btn-access"></div>
+                    </div>
+                </div>
+            </div>
+            <div v-if="selectedPost" class="post-selected">
+                <div class="btn-back" @click="unselectPost()"></div>
+                <h5>{{selectedPost?.title}}</h5>
+                <p>{{selectedPost?.description}}</p>
+                <img :src="imageSecure(selectedPost?.cover)" :alt="selectedPost?.title">
+
+                <div class="images">
+                    <img v-for="image in selectedPost?.images" :src="imageSecure(image?.image)" :alt="selectedPost?.title"> <br>
+                </div>
+            </div>
+        </div></script><script type="text/x-template" id="contato-component"><div>
+            <h4>Contato</h4>
+            <p>Email -> {{email}}</p>
+            <p>Telefone/WhatsApp -> {{phone}}</p>
+            <p>instagram -> {{instagram}}</p>
+        </div></script></head><body><div id="app"><header class="bg-dark"><div class="container pt-4 pb-4"><div class="profile"><div class="avatar"><img height="100px" style="border-radius: 50%;" src="./assets/avatar.jpg" alt=""></div><div class="data ml-4"><p><b>Alison Aguiar</b></p><p>contato@alisonaguiar.com</p><p>phone-> (85)9 8118-2610</p><div class="social-buttons"><a href="https://www.facebook.com/AlisonAguiahr"><i class="ion-social-facebook"></i></a> <a href="https://github.com/gitalison"><i class="ion-social-github"></i></a> <a href="https://api.whatsapp.com/send?phone=5554996815586"><img height="17px" src="./assets/whatsapp.svg" alt=""> </a><a href="https://instagram.com/alison_aguiarof" target="_blank"><i class="ion-social-instagram"></i></a> <a class="pl-1 pr-1 clock">{{time}}</a></div></div></div></div></header><!-- Navigation --><div class="navigation"><div class="win-buttons"><div class="button" onclick="closeContent()"><i class="ion-close"></i></div><div class="button" onclick="maximizeContent()"><i class="ion-qr-scanner"></i></div><div class="button" onclick="minimizeContent()"><i class="ion-minus"></i></div></div><div class="win-buttons"><div class="search-button" onclick="showTerminal()"><i class="ion-search"></i></div></div><div class="navlinks"><span class="separator"></span><div class="navlink"><router-link to="/">Inicio</router-link></div><span class="separator"></span><div class="navlink"><router-link to="/portifolio">Portifólio</router-link></div><!-- <div class="navlink">
+                    <span class="separator"></span>
+                    <a href="#">Posts</a>
+                </div> --> <span class="separator"></span><div class="navlink"><router-link to="/contato">Contato</router-link></div></div></div><div id="terminal" onclick="focusTerminal()"><div class="gradient-animation"></div><div class="toolbar"><div onclick="toggleTerminal()" class="button"><i class="ion-close"></i></div><div class="title">Terminal</div></div><div class="body h-100"><p id="typedterm">alison@aguiar$:</p><form action="" novalidate>><input id="search-input" placeholder="Pesquisar Aqui"><!-- <textarea id="search-input" class="w-100" placeholder="Pesquisar Aqui" cols="30" rows="10"></textarea> --></form></div></div><!-- <div class="gradient"></div> --><div class="gradient-animation"></div><div class="container content"><div class="row"><div class="col-sm-8 p-3 container-post"><router-view :posts="posts"></router-view><!-- <ul class="pagination">
+                        <li> <i class="ion-chevron-left"></i> </li>
+                        <li class="active"> 1 </li>
+                        <li> 2 </li>
+                        <li> 3 </li>
+                        <li> <i class="ion-chevron-right"></i> </li>
+
+                    </ul> --></div><div class="col-sm-4"><div class="p-3 pld bld brd bbd"><h5>self.tools += [</h5><div class="d-flex justify-content-center flex-wrap"><div class="category" style="background-image: url('./assets/lang/angular.png');"></div><div class="category" style="background-image: url('./assets/lang/django.png');"></div><div class="category" style="background-image: url('./assets/lang/vue.png');"></div><div class="category" style="background-image: url('./assets/lang/scss.png');"></div><div class="category" style="background-image: url('./assets/lang/flutter.png');"></div><div class="category" style="background-image: url('./assets/lang/ionic.png');"></div><div class="category" style="background-image: url('./assets/lang/js.png');"></div><div class="category" style="background-image: url('./assets/lang/nestjs.jpeg');"></div><div class="category" style="background-image: url('./assets/lang/nodejs.png');"></div><div class="category" style="background-image: url('./assets/lang/postgresql.png');"></div><div class="category" style="background-image: url('./assets/lang/python.jpg');"></div><div class="category" style="background-image: url('./assets/lang/ts.png');"></div><div class="category" style="background-image: url('./assets/lang/gulp.png');"></div></div><h5>]</h5></div></div></div></div><br><div class="footer">>_ Todos os direitos reservados a Alison Aguiar</div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> --><script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script><script src="https://unpkg.com/vue-router/dist/vue-router.js"></script><script src="./js/app-min.js"></script><script src="./js/main-min.js"></script></body></html>
