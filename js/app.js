@@ -1,3 +1,7 @@
+const Ebook = {
+    template: "#ebook-component"
+}
+
 const Home = {
     template: '#home-component',
     data: function() {
@@ -93,6 +97,7 @@ const Portifolio = {
 // We'll talk about nested routes later.
 const routes = [
     { path: '/', component: Home },
+    { path: '/ebook', component: Ebook },
     { path: '/contato', component: Contato },
     { path: '/portifolio', component: Portifolio, props: true },
 
