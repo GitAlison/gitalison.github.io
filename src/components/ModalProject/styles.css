@@ -1,0 +1,9 @@
+.h-modal {
+  height: 100vh;
+}
+[data-testid="modal"] > div {
+  padding: 0;
+}
+[data-testid="modal"] > div > div{
+    height: 100vh!important;
+}

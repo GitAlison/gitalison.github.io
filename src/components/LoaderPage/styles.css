@@ -1,0 +1,128 @@
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation-iteration-count: 1;
+  animation: removeScreen 2s normal forwards ease-in-out;
+  @apply bg-primary-950;
+}
+.loader-page {
+  --cell-size: 52px;
+  --cell-spacing: 1px;
+  --cells: 3;
+  --total-size: calc(
+    var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing))
+  );
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+.loader-page .cell {
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1s ripple ease infinite;
+}
+
+.loader-page .cell.d-1 {
+  animation-delay: 100ms;
+}
+
+.loader-page .cell.d-2 {
+  animation-delay: 200ms;
+}
+
+.loader-page .cell.d-3 {
+  animation-delay: 300ms;
+}
+
+.loader-page .cell.d-4 {
+  animation-delay: 400ms;
+}
+
+.loader-page .cell:nth-child(1) {
+  --cell-color: #00ff87;
+}
+
+.loader-page .cell:nth-child(2) {
+  --cell-color: #0cfd95;
+}
+
+.loader-page .cell:nth-child(3) {
+  --cell-color: #17fba2;
+}
+
+.loader-page .cell:nth-child(4) {
+  --cell-color: #23f9b2;
+}
+
+.loader-page .cell:nth-child(5) {
+  --cell-color: #30f7c3;
+}
+
+.loader-page .cell:nth-child(6) {
+  --cell-color: #3df5d4;
+}
+
+.loader-page .cell:nth-child(7) {
+  --cell-color: #45f4de;
+}
+
+.loader-page .cell:nth-child(8) {
+  --cell-color: #53f1f0;
+}
+
+.loader-page .cell:nth-child(9) {
+  --cell-color: #60efff;
+}
+
+/*Animation*/
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+
+  30% {
+    background-color: var(--cell-color);
+  }
+
+  60% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes removeScreen {
+  60% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(2);
+  }
+  93% {
+    transform: scale(3);
+    @apply bg-primary-950;
+  }
+  96% {
+    transform: scale(3);
+    top: 0;
+  }
+  100% {
+    visibility: hidden;
+    pointer-events: none;
+    background-color: transparent;
+    top: -1000vh;
+  }
+}

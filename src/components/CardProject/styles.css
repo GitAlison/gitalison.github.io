@@ -1,0 +1,33 @@
+@keyframes balanceTool {
+  0% {
+    transform: rotate(180deg) scale(2);
+  }
+  25% {
+    transform: rotate(200deg) scale(2);
+  }
+  75% {
+    transform: rotate(160deg) scale(2);
+  }
+  100% {
+    transform: rotate(180deg) scale(2);
+  }
+}
+.image-tool {
+  animation-delay: 4s;
+  animation: jump 4s ease-in-out infinite;
+}
+.image-tool:nth-child(1n) {
+  animation-delay: 1s;
+}
+.image-tool:nth-child(2n) {
+  animation-delay: 1.2s;
+}
+.image-tool:nth-child(3n) {
+  animation-delay: 1.4s;
+}
+
+.image-tool:hover {
+  transform: scale(2), rotate(180deg) !important;
+  z-index: 2;
+  animation: balanceTool linear infinite 2000ms;
+}

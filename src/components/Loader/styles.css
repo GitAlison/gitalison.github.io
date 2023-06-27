@@ -1,0 +1,40 @@
+.loading-animation {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.loading-animation span {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  margin-right: 2px;
+  pointer-events: none;
+  animation: loading linear infinite 500ms;
+  
+}
+.loading-animation span{
+  margin: 0 auto;
+  align-self: center;
+}
+.loading-animation span:nth-child(2n) {
+  animation-delay: 600ms;
+}
+.loading-animation span:nth-child(3n) {
+  animation-delay: 800ms;
+}
+
+
+@keyframes loading {
+  0% {
+    @apply bg-white;
+  }
+  50% {
+    @apply bg-primary-200;
+  }
+  75% {
+    @apply bg-primary-300;
+  }
+  100% {
+    @apply bg-white;
+  }
+}
