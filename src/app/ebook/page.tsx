@@ -24,7 +24,7 @@ export default function Ebook() {
               possivel que tenha novidade caso você já conheça
             </h1>
             <a
-              href="https://www.maionesys.com/alisonaguiar/EBook-Django-RestFramework.pdf"
+              href="./EBook Django RestFramework.pdf"
               target="_blank"
               className="btn-3d inline-flex items-center mt-2"
             >
