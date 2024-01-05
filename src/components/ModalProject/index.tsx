@@ -20,7 +20,7 @@ export default function ModalProject({ project }: Props) {
         onClick={() => {
           setModal(true);
         }}
-        className="btn-3d min-w-[200px] mx-auto"
+        className="btn-3d min-w-[200px]"
         type="button"
       >
         VER DETALHES <BsChevronRight />

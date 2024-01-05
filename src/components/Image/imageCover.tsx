@@ -18,16 +18,16 @@ export function ImageCover({ project }: Props) {
     setPicture(`/assets/images/${project.folder}/${randomPic}`);
   };
   useEffect(() => {
-
-    setTimeout(() => {
-      getRandomPic();
-      setInterval(() => {
-        setPicture(null);
-        setTimeout(() => {
-          getRandomPic();
-        }, timeout);
-      }, 8000);
-    }, 2000);
+    getRandomPic()
+    // setTimeout(() => {
+    //   getRandomPic();
+    //   setInterval(() => {
+    //     setPicture(null);
+    //     setTimeout(() => {
+    //       getRandomPic();
+    //     }, timeout);
+    //   }, 8000);
+    // }, 2000);
   },[]);
 
   return srcPicture ? (

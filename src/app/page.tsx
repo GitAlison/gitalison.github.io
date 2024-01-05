@@ -8,7 +8,7 @@ export default function Home() {
       <div className="container mx-auto ">
         <div className="p-3 text-slate-900 font-mono">
           <div>
-            <h1 className="text-4xl sm:text-8xl gradient-primary py-8">
+            <h1 className="text-2xl sm:text-4xl gradient-primary py-8">
               Olá Sou DESENVOLVEDOR DE SOFTWARE
             </h1>
 

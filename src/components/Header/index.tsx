@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header>
       <div className="container mx-auto ">
-        <div className="flex flex-wrap flex-col md:flex-row justify-between">
+        <div className="flex flex-wrap flex-col">
           <div className="flex p-2 sm:mx-0">
             <div>
               <Image
@@ -82,8 +82,8 @@ export default function Header() {
             </div>
           </div>
           {/* NAV DESKTOP */}
-          <div className="hidden sm:flex align-strech ">
-            <div className="flex  md:text-md sm:justify-center text-2xl font-mono uppercase navigation">
+          <div className="hidden sm:flex align-strech mt-4">
+            <div className="flex md:text-md sm:justify-center text-2xl font-mono uppercase navigation">
               <Link
                 href={"/"}
                 className={`nav-item ${pathname == "/" ? "active" : ""}`}
@@ -117,7 +117,7 @@ export default function Header() {
           {/* END NAV DESKTOP */}
 
           {/* NAV MOBILE */}
-          <div className="flex sm:hidden grid-cols-2 mt-2">
+          <div className="flex sm:hidden grid-cols-2">
             <div className="mobile-nav grid grid-cols-2 text-2xl font-mono uppercase navigation">
               <Link
                 href={"/"}

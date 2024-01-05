@@ -9,68 +9,6 @@ export interface Project {
 
 export const projects_data: Project[] = [
   {
-    folder: "alcool_or_gas",
-    title: "Alcool Or gas",
-    files: [
-      "alcool_or_gas1.png",
-      "alcool_or_gas2.png",
-      "alcool_or_gas3.gif",
-      "alcool_or_gas4.png",
-      "alcool_or_gas5.png",
-    ],
-    tools: ["flutter", "figma"],
-  },
-  {
-    folder: "barber_app",
-    title: "Barber App",
-    files: Array(8)
-      .fill(1)
-      .map((_, i) => `barber_app${i + 1}.jpg`),
-    tools: ["flutter", "figma"],
-  },
-  {
-    folder: "ecommerce_de_joias_com_afiliados",
-    title: "Ecommerce de Joias",
-    files: Array(41)
-      .fill(1)
-      .map((_, i) => `lazuli-boss${i + 1}.png`),
-    tools: [
-      "webpack",
-      "ts",
-      "js",
-      "postgres",
-      "python",
-      "django",
-      "nodejs",
-      "scss",
-      "angular",
-    ],
-  },
-  {
-    folder: "fofok_app",
-    title: "Fofoka APp",
-    files: Array(12)
-      .fill(1)
-      .map((_, i) => `fofok_app${i + 1}.jpg`),
-    tools: ["flutter", "python", "django"],
-  },
-  {
-    folder: "goldpescados",
-    title: "Gold Pescados",
-    files: Array(34)
-      .fill(1)
-      .map((_, i) => `gols-pescados${i + 1}.png`),
-    tools: ["python", "django", "html", "css", "js", "postgres"],
-  },
-  {
-    folder: "marcenaria",
-    title: "Marcenaria",
-    files: Array(14)
-      .fill(1)
-      .map((_, i) => `marcenaria${i + 1}.png`),
-    tools: ["js", "postgres", "python", "django"],
-  },
-  {
     folder: "meu_predio_smart",
     title: "meu predio smart",
     files: Array(34)
@@ -91,6 +29,82 @@ export const projects_data: Project[] = [
       "angular",
     ],
   },
+  {
+    folder: "goldpescados",
+    title: "Gold Pescados",
+    files: Array(34)
+      .fill(1)
+      .map((_, i) => `gols-pescados${i + 1}.png`),
+    tools: ["python", "django", "html", "css", "js", "postgres"],
+  },
+  {
+    folder: "ecommerce_de_joias_com_afiliados",
+    title: "Ecommerce de Joias",
+    files: Array(41)
+      .fill(1)
+      .map((_, i) => `lazuli-boss${i + 1}.png`),
+    tools: [
+      "webpack",
+      "ts",
+      "js",
+      "postgres",
+      "python",
+      "django",
+      "nodejs",
+      "scss",
+      "angular",
+    ],
+  },
+  {
+    folder: "tube_chat",
+    title: "Tube Chat",
+    files: [
+      "tube_chat_app1.gif",
+      ...Array(6)
+        .fill(1)
+        .map((_, i) => `tube_chat_app${i + 2}.png`),
+    ],
+    tools: ["css", "scss", "js", "postgres", "nodejs", "nestjs", "angular"],
+  },
+  {
+    folder: "alcool_or_gas",
+    title: "Alcool Or gas",
+    files: [
+      "alcool_or_gas1.png",
+      "alcool_or_gas2.png",
+      "alcool_or_gas3.gif",
+      "alcool_or_gas4.png",
+      "alcool_or_gas5.png",
+    ],
+    tools: ["flutter", "figma"],
+  },
+  
+  {
+    folder: "barber_app",
+    title: "Barber App",
+    files: Array(8)
+      .fill(1)
+      .map((_, i) => `barber_app${i + 1}.jpg`),
+    tools: ["flutter", "figma"],
+  },
+  {
+    folder: "fofok_app",
+    title: "Fofoka APp",
+    files: Array(12)
+      .fill(1)
+      .map((_, i) => `fofok_app${i + 1}.jpg`),
+    tools: ["flutter", "python", "django"],
+  },
+  
+  {
+    folder: "marcenaria",
+    title: "Marcenaria",
+    files: Array(14)
+      .fill(1)
+      .map((_, i) => `marcenaria${i + 1}.png`),
+    tools: ["js", "postgres", "python", "django"],
+  },
+  
   {
     folder: "prontuario_posto_de_saude",
     title: "Prontuario",
@@ -129,15 +143,5 @@ export const projects_data: Project[] = [
       .map((_, i) => `toolfit${i + 1}.png`),
     tools: ["html", "css", "js", "python", "django"],
   },
-  {
-    folder: "tube_chat",
-    title: "Tube Chat",
-    files: [
-      "tube_chat_app1.gif",
-      ...Array(6)
-        .fill(1)
-        .map((_, i) => `tube_chat_app${i + 2}.png`),
-    ],
-    tools: ["css", "scss", "js", "postgres", "nodejs", "nestjs", "angular"],
-  },
+  
 ];
